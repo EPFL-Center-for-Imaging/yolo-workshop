@@ -1,0 +1,10 @@
+# Modify the class names as needed
+names:
+  0: Quinoa seed
+  1: Chia seed
+
+# Write the path to your dataset (folder containing images/ and labels/) 
+# It can be an absolute path, or a relative path from where you're launching the training script. 
+path: ./dataset
+train: images/train
+val: images/val

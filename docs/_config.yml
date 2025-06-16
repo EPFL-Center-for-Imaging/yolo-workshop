@@ -1,0 +1,23 @@
+title: EIAS 2025
+author: EPFL Center for Imaging
+logo: "logo.ico"
+copyright: "2025"
+
+only_build_toc_files: true
+
+repository:
+  url: https://github.com/EPFL-Center-for-Imaging/yolo-workshop
+  branch: main
+  path_to_book: "docs"
+
+html:
+  favicon: "logo.ico"
+  use_issues_button: false
+  use_repository_button: true
+  toc: true
+  toc_depth: 2
+
+parse:
+  myst_enable_extensions:
+    - linkify
+    - html_admonition

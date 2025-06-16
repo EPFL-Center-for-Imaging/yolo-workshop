@@ -1,0 +1,8 @@
+format: jb-book
+root: index
+chapters:
+- file: sections/acquisition
+- file: sections/annotation
+- file: sections/training
+- file: sections/inference
+- file: sections/conclusion

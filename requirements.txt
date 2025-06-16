@@ -1,0 +1,3 @@
+ultralytics
+opencv-contrib-python-headless
+streamlit>=1.29.0
