@@ -2,7 +2,7 @@
 
 This workshop will introduce you to the fundamental concepts of object detection and guide you through the steps of acquiring images, annotating them, training a model, and testing it with live inference. While our focus will be on object detection, the workflows for segmentation, classification, and other tasks follow similar principles (for more details, see [Ultralytics Tasks](https://docs.ultralytics.com/tasks/) in your own time).
 
-![Introduction](./assets/intro_gif.gif)
+![Introduction](./assets/intro.gif)
 
 We will use a system based on the [YOLO](https://en.wikipedia.org/wiki/You_Only_Look_Once) algorithm, which is a state-of-the-art method for real-time object detection. YOLO is particularly lightweight, usually offers good performance, and requires few images for training, making it a particularly useful tool for a variety of applications in computer vision and scientific image analysis.
 
@@ -65,8 +65,14 @@ Open the `Photo Booth` app from the Applications folder.
 
 ## Overview
 
-The workflow for this workshop is summarized in the diagram below:
+In this workshop, you'll have an opportunity to practice a standard computer vision workflow, which includes the steps illustrated in the diagram below.
 
-![Workflow](./assets/workflow_steps.png)
+```{mermaid}
+flowchart LR
+    A(🔬 Acquisition) --> B(🖌️ Annotation)
+    B --> C(🎓 Training)
+    C --> D(⚖️ Validation)
+    D --> E(🔋 Inference)
+```
 
 Now that you're set up, let's dive in - starting with acquiring some training images.

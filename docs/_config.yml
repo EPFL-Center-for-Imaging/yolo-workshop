@@ -21,3 +21,7 @@ parse:
   myst_enable_extensions:
     - linkify
     - html_admonition
+
+sphinx:
+  extra_extensions:
+    - sphinxcontrib.mermaid
