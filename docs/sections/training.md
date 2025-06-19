@@ -23,7 +23,7 @@ pip install "ultralytics[solutions]"
 ```
 
 ```{note}
-The `[solutions]` option is usually optional - it installs a few additional dependencies, including [Streamlit](https://streamlit.io/), which we will use for running live inference in a web browser.
+The `[solutions]` option is used to install a few additional dependencies, including [Streamlit](https://streamlit.io/), which we will use for running live inference in a web browser.
 ```
 
 ```{admonition} Verify Your Installation
@@ -88,7 +88,7 @@ Most importantly, you should be able to locate a `weights` subfolder in the trai
 These weight files are what you need to reload your model and run it on new images.
 
 ```{admonition} Do You Need a GPU for Training?
-While having a GPU can significantly speed up the training process, it is not strictly necessary. For smaller models or if you don't mind longer training times, you can train your model on a CPU-only machine, even on a laptop. If you don't have immediate access to a GPU, don't let this discourage you from experimenting!
+While having a GPU can significantly speed up the training process, it is not strictly necessary. Smaller models, especially, can often be trained even on a laptop.
 ```
 
-Next, you'll test your trained model with live inference!
+Next, you'll test your trained model in real time on the microscope!

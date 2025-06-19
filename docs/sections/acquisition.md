@@ -9,10 +9,10 @@ You should start by collecting a set of representative images of the objects you
 ![training_set](../assets/training_set.png)
 
 ```{tip}
-Keep in mind that you'll have to manually annotate the objects in the next step. Try not to have much more than 5-10 objects of each kind in each image, so that you won't spend all of your time annotating them!
+Having 5 to 10 objects of each type in each image should be good enough (keep in mind that you'll have to manually annotate all of them later!).
 ```
 
-Organize your images into a dedicated folder named `dataset` on your computer. Within this folder, create a subfolder called `images`, and further divide it into `train` for training images and `val` for validation images. The file names don't matter. Tou can save the images in either `png`, `jpeg`, or `tif` format (they should be RGB colored images).
+Organize your images into a dedicated folder named `dataset` on your computer. Within this folder, create a subfolder called `images`, and further divide it into `train` for training images and `val` for validation images. You can save your training images under `train` and your validation images under `val`. The images should be in either `png`, `jpeg`, or `tif` format (they should be RGB colored images).
 
 Here’s an example of how your dataset folder structure should look:
 
@@ -31,8 +31,7 @@ dataset
 
 ```{admonition} Tips for acquiring a good training set
 
+- It is true that having more images in your training set generally improves performance. However, when fine-tuning a pretrained model (as we will do), we generally need much fewer images than when training a model from scratch.
 
-- The more images in your training set, the better. However, when you fine-tune your model from a pretrained model, as we'll do, you probably won't need a many images.
-
-- The more variety in your training set, the better. It should reflect the conditions under which the model will operate. For instance, if variations in illumination, focus, or magnification are expected when using the model, similar variations should be captured in the training set.
+- You should ensure that your training set is representative of the variety of lighting, focus, magnification, background, as well as objects and object placements that the model is likely to encounter during operation.
 ```
