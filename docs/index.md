@@ -10,45 +10,17 @@ We will apply this to our USB microscopes and train a model to automatically rec
 
 ![seeds_overview](./assets/seeds.png)
 
-## Python Setup
-
-We will use the YOLO implementation from the [Ultralytics](https://ultralytics.com/) Python library, which provides a variety of tools to train, validate, and work with YOLO models. 
-
-To install Ultralytics, 
-you will need Python installed on your system. We recommend using a fresh Python virtual environment to follow best practices (for more details, see our [Python setup guide](https://imaging.epfl.ch/field-guide/sections/python/notebooks/python_setup.html#create-a-python-virtual-environment)).
-
-```{admonition} Verify Your Installation
-Run `python -V` in your terminal to display your Python version, which should be `3.8` or higher.
-```
-
-![Python Version](./assets/python_version.gif)
-
-Next, install the `ultralytics` library in your Python environment:
-
-```
-pip install "ultralytics[solutions]"
-```
-
-```{note}
-The `[solutions]` option is usually optional - it installs a few additional dependencies, including [Streamlit](https://streamlit.io/), which we will use for running live inference in a web browser.
-```
-
-```{admonition} Verify Your Installation
-Run `yolo checks` in your terminal. This command should display some information about the installed package.
-```
-
-For advanced or custom installation of Ultralytics, refer to their [Quickstart Guide](https://docs.ultralytics.com/quickstart/).
-
-## Camera Setup
+## Microscope Setup
 
 To train and test your object detection model, you will need:
 
-- A USB microscope, webcam, or similar device
-- Objects to capture images of (e.g., quinoa, chia seeds, sand grains, or other small items)
+- A USB microscope, or similar device
+- Some seeds to capture images of (e.g., quinoa, chia)
+- Python installed on your system (you can do the [Python setup](./sections/training.md#python-setup) at a later stage)
 
 ![Camera Setup](./assets/camera_setup.png)
 
-You should also ensure to have a way to starting the camera and capturing images.
+You should also be able to start the camera and capture images.
 
 `````{tab-set}
 ````{tab-item} Windows

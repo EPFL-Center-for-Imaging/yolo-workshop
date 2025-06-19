@@ -185,3 +185,4 @@ dataset/**/*.png
 dataset/**/*.txt
 dataset/**/*.cache
 figures.svg
+slides/

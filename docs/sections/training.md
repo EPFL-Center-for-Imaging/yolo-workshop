@@ -4,7 +4,35 @@
 Estimated time for this step: 20-25 minutes.
 ```
 
-To train your model, you'll use the YOLO command-line interface from the terminal.
+To train a model, we will use the YOLO implementation from the [Ultralytics](https://ultralytics.com/) Python library, which provides a variety of tools to train, validate, and work with YOLO models.
+
+## Python setup
+
+You should already have Python installed on your system. We recommend using a fresh Python virtual environment to follow best practices (for more details, see our [Python setup guide](https://imaging.epfl.ch/field-guide/sections/python/notebooks/python_setup.html#create-a-python-virtual-environment)).
+
+```{admonition} Verify Your Installation
+Run `python -V` in your terminal to display your Python version, which should be `3.8` or higher.
+```
+
+![Python Version](../assets/python_version.gif)
+
+Next, install the `ultralytics` library in your Python environment:
+
+```
+pip install "ultralytics[solutions]"
+```
+
+```{note}
+The `[solutions]` option is usually optional - it installs a few additional dependencies, including [Streamlit](https://streamlit.io/), which we will use for running live inference in a web browser.
+```
+
+```{admonition} Verify Your Installation
+Run `yolo checks` in your terminal. This command should display some information about the installed package.
+```
+
+For advanced or custom installation of Ultralytics, refer to their [Quickstart Guide](https://docs.ultralytics.com/quickstart/).
+
+## Create a `dataset.yaml`
 
 To train a model, you first need to create a YAML configuration file named `dataset.yaml`. This file should include the paths to your training and validation image datasets, as well as the class labels for your model.
 
@@ -23,6 +51,8 @@ val: images/val
 ```
 
 You can create your own `dataset.yaml` file and save it somewhere on your computer (for example in your project's folder, to keep things tidy).
+
+## Start training
 
 Once you haver your configuration file, you can start the training process by running the following command in your terminal:
 
