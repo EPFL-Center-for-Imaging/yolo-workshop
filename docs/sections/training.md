@@ -10,7 +10,7 @@ To train a model, we will use the YOLO implementation from the [Ultralytics](htt
 
 You should already have Python installed on your system. We recommend using a fresh Python virtual environment to follow best practices (for more details, see our [Python setup guide](https://imaging.epfl.ch/field-guide/sections/python/notebooks/python_setup.html#create-a-python-virtual-environment)).
 
-```{admonition} Verify Your Installation
+```{admonition} Verify your installation
 Run `python -V` in your terminal to display your Python version, which should be `3.8` or higher.
 ```
 
@@ -26,7 +26,7 @@ pip install "ultralytics[solutions]"
 The `[solutions]` option is used to install a few additional dependencies, including [Streamlit](https://streamlit.io/), which we will use for running live inference in a web browser.
 ```
 
-```{admonition} Verify Your Installation
+```{admonition} Verify your installation
 Run `yolo checks` in your terminal. This command should display some information about the installed package.
 ```
 
@@ -34,7 +34,7 @@ For advanced or custom installation of Ultralytics, refer to their [Quickstart G
 
 ## Create a `dataset.yaml`
 
-To train a model, you first need to create a YAML configuration file named `dataset.yaml`. This file should include the paths to your training and validation image datasets, as well as the class labels for your model.
+To train a model, you also need to create a YAML configuration file named `dataset.yaml`. This file should specify the paths to your training and validation image datasets, as well as the class labels for your model.
 
 Here’s an example of a minimal `dataset.yaml` file:
 
@@ -50,7 +50,7 @@ train: images/train
 val: images/val
 ```
 
-You can create your own `dataset.yaml` file and save it somewhere on your computer (for example in your project's folder, to keep things tidy).
+You can create your own `dataset.yaml` file and save it somewhere on your computer (for example in your `dataset` folder, to keep things tidy).
 
 ## Start training
 

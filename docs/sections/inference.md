@@ -5,13 +5,13 @@ Inference is the process of using a trained model to detect objects in new, unse
 To test your model, you can use the `predict` command:
 
 ```
-yolo predict model="/path/to/weights/last.pt" source=4 show=True
+yolo predict model="/path/to/weights/last.pt" source=1 show=True
 ```
 
 The `predict` command includes several parameters you can customize ([docs](https://docs.ultralytics.com/modes/predict/)). Here, we've selected:
 
 - **`model`**: the path to your trained model's weights file.
-- **`source`**: the input source for inference. Here, `4` represents the camera index for your USB microscope. If `4` doesn't work, try other indices (e.g., `0`, `1`, etc.) until you find the correct one.
+- **`source`**: the input source for inference. Here, `1` represents the camera index for your USB microscope. If `1` doesn't work, try other indices (e.g., `0`, `2`, etc.) until you find the correct one.
 - **`show`**: opens a visualization window.
 
 When you run the `predict` command, a window should appear showing a live video feed from the microscope, including bounding box detections and the corresponding object classes.
@@ -24,7 +24,7 @@ To test the model in a Streamlit app in your web browser, you can download our [
 Then, run it with the following command (specifying the "webcam index" of your USB microscope):
 
 ```
-streamlit run inference_streamlit.py path/to/weights/last.pt -- --webcam 4
+streamlit run inference_streamlit.py path/to/weights/last.pt -- --webcam 1
 ```
 
 The app should run on [http://localhost:5600](http://localhost:5600). You can open this link in your web browser to see the app.
