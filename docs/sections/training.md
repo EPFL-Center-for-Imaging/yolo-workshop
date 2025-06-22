@@ -87,7 +87,7 @@ Most importantly, you should be able to locate a `weights` subfolder in the trai
 
 These weight files are what you need to reload your model and run it on new images.
 
-```{admonition} Do You Need a GPU for Training?
+```{admonition} Do you need a GPU for training?
 While having a GPU can significantly speed up the training process, it is not strictly necessary. Smaller models, especially, can often be trained even on a laptop.
 ```
 

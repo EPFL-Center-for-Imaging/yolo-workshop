@@ -25,3 +25,7 @@ parse:
 sphinx:
   extra_extensions:
     - sphinxcontrib.mermaid
+  recursive_update: true
+  config:
+    html_context:
+      default_mode: light

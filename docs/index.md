@@ -1,4 +1,4 @@
-# Object Detection with Ultralytics YOLO
+# Object Detection with YOLO
 
 In this workshop, we'll go through the steps of acquiring images, annotating them, training an object detection model, and testing it in real time on our USB microscopes.
 
@@ -22,7 +22,7 @@ We will train a model to automatically recognize different kinds of seeds and sp
 
 To complete this workshop, you will need:
 
-- A USB microscope, or similar device
+- A USB microscope
 - Some seeds to capture images of (e.g., quinoa, chia)
 - Python installed on your system
 
