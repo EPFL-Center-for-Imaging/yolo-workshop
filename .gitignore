@@ -180,6 +180,8 @@ src/images/png/
 todo.txt
 *.pt
 
+_build/
+runs/
 models/
 dataset/**/*.png
 dataset/**/*.txt
