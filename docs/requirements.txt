@@ -1,0 +1,2 @@
+jupyter-book<2.0.0
+sphinxcontrib-mermaid==1.0.0

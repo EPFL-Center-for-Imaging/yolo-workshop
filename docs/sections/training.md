@@ -8,10 +8,10 @@ To train a model, we will use the YOLO implementation from the [Ultralytics](htt
 
 ## Python setup
 
-You should already have Python installed on your system. We recommend using a fresh Python virtual environment to follow best practices (for more details, see our [Python setup guide](https://imaging.epfl.ch/field-guide/sections/python/notebooks/python_setup.html#create-a-python-virtual-environment)).
+You should already have Python installed on your system. We recommend using a fresh Python virtual environment to follow best practices (for more details, see our [Python setup guide](https://epfl-center-for-imaging.github.io/python-setup/)).
 
 ```{admonition} Verify your installation
-Run `python -V` in your terminal to display your Python version, which should be `3.8` or higher.
+Run `python -V` in your terminal to display your Python version. It should be `3.8` or higher.
 ```
 
 ![Python Version](../assets/python_version.gif)
@@ -34,7 +34,7 @@ For advanced or custom installation of Ultralytics, refer to their [Quickstart G
 
 ## Create a `dataset.yaml`
 
-To train a model, you also need to create a YAML configuration file named `dataset.yaml`. This file should specify the paths to your training and validation image datasets, as well as the class labels for your model.
+To train a model, you also need to create a YAML configuration file named `dataset.yaml`. This file should specify the paths to your training and validation images, as well as the class labels for your model.
 
 Here’s an example of a minimal `dataset.yaml` file:
 
@@ -63,7 +63,7 @@ yolo detect train data=path/to/dataset.yaml model=yolo11n.pt epochs=100 project=
 This command specifies:
 
 - `data`: the path to your YAML configuration file.
-- `model`: the pre-trained YOLO model you want to fine-tune ([docs](https://docs.ultralytics.com/models/yolo11/)).
+- `model`: the pre-trained YOLO model you want to fine-tune ([docs](https://docs.ultralytics.com/models/yolo26/)).
 - `epochs`: the number of training iterations (higher values mean longer training times).
 - `project`: where to save the training outputs.
 
@@ -80,7 +80,7 @@ When the training completes, the results will be saved in the directory you've s
 - Training and validation loss curves.
 - A record of the training parameters.
 
-Most importantly, you should be able to locate a `weights` subfolder in the training outputs. It should contain two model weight files in PyTorch format:
+Most importantly, there should be a `weights` subfolder in the training outputs. It should contain two model weight files in PyTorch format:
 
 - **`best.pt`**: The model weights from the epoch with the best validation score.
 - **`last.pt`**: The model weights from the final training epoch.
@@ -88,7 +88,7 @@ Most importantly, you should be able to locate a `weights` subfolder in the trai
 These weight files are what you need to reload your model and run it on new images.
 
 ```{admonition} Do you need a GPU for training?
-While having a GPU can significantly speed up the training process, it is not strictly necessary. Smaller models, especially, can often be trained even on a laptop.
+While having a GPU can significantly speed up the training process, it is not strictly necessary. YOLO models, especially the smaller ones, can often be trained even on a laptop.
 ```
 
 Next, you'll test your trained model in real time on the microscope!

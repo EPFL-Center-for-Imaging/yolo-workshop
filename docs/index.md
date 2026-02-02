@@ -14,7 +14,7 @@ flowchart LR
 
 We will implement a system based on the [YOLO](https://en.wikipedia.org/wiki/You_Only_Look_Once) algorithm, which is a state-of-the-art method for real-time object detection. YOLO models usually offer good performance and require few images for training, making them particularly useful for applications in computer vision and scientific image analysis.
 
-We will train a model to automatically recognize different kinds of seeds and spices from your kitchen:
+We will train a model to automatically recognize different kinds of seeds and spices from our kitchen:
 
 ![seeds_overview](./assets/seeds.png)
 
@@ -32,14 +32,15 @@ You should also be able to start the camera and capture images.
 
 `````{tab-set}
 ````{tab-item} Windows
-Open the `Camera` app from the Start menu.
+Open the `Camera` app from the start menu. In the *Settings*, you should be able to select the USB microscope as an input device instead of your webcam.
 ````
 ````{tab-item} Mac
-Open the `Photo Booth` app from the Applications folder.
+Open the `Photo Booth` app from the Applications folder. In the *Settings*, you should be able to select the USB microscope as an input device instead of your webcam.
 ````
 ````{tab-item} Linux
 1. Install [Cheese](https://en.wikipedia.org/wiki/Cheese_(software)) using `sudo apt install cheese`.
 2. Launch it from the terminal with the `cheese` command.
+3. In the *Preferences*, you should be able to select the USB microscope as a device instead of your webcam.
 ````
 `````
 

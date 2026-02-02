@@ -6,7 +6,7 @@ Estimated time for this step: 20-25 minutes.
 
 In this step, you'll annotate the images you've collected for training and validation. Annotation consists in manually creating a "ground truth" for the model to learn from. For object detection, this means drawing rectangular bounding boxes around the objects. Moreover, you can assign class labels to these bounding boxes to categorize them.
 
-There are many tools available for image annotation ([Label Studio](https://github.com/HumanSignal/label-studio), [CVAT](https://github.com/cvat-ai/cvat), [Napari](https://forum.image.sc/t/napari-plugin-for-creating-object-detection-training-data/80622), [QuPath](https://gitlab.com/epfl-center-for-imaging/qupath-yolo-toolbox)...). For simplicity, we'll use [Make Sense](https://www.makesense.ai/), a free and open-source web-based tool.
+There are many tools available for image annotation ([Label Studio](https://github.com/HumanSignal/label-studio), [CVAT](https://github.com/cvat-ai/cvat), [Napari](https://forum.image.sc/t/napari-plugin-for-creating-object-detection-training-data/80622)...). For simplicity, we'll use [Make Sense](https://www.makesense.ai/), a free and open-source web-based tool.
 
 ![annotations overview](../assets/annotations.png)
 
