@@ -2,7 +2,12 @@
 
 ![graphical_abstract](./docs/assets/streamlit_screenshot.png)
 
-Material for the 2025 EIAS Workshop of introduction to object detection with Ultralytics YOLO.
+A workshop of introduction to object detection with Ultralytics YOLO, taught using USB microscopes.
+
+Past editions:
+
+- [EIAS 2025](): Summer School in Image Analysis @EPFL
+- [AMLD 2026](): Intelligence Summit @EPFL
 
 ↗️ [Workshop instructions](https://epfl-center-for-imaging.github.io/yolo-workshop/)
 
