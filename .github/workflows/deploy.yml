@@ -22,7 +22,7 @@ jobs:
         cache: pip # Implicitly uses requirements.txt for cache key
         
     - name: Install dependencies
-      run: pip install jupyter-book<2.0 sphinxcontrib-mermaid==1.0.0
+      run: pip install "jupyter-book<2.0" "sphinxcontrib-mermaid==1.0.0"
 
     - name: Build the book
       run: |
