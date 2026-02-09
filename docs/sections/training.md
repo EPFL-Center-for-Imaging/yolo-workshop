@@ -57,7 +57,7 @@ You can create your own `dataset.yaml` file and save it somewhere on your comput
 Once you haver your configuration file, you can start the training process by running the following command in your terminal:
 
 ```
-yolo detect train data=path/to/dataset.yaml model=yolo11n.pt epochs=100 project=/path/to/output
+yolo detect train data=path/to/dataset.yaml model=yolo26n.pt epochs=100 project=/path/to/output
 ```
 
 This command specifies:

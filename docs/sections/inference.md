@@ -18,6 +18,14 @@ When you run the `predict` command, a window should appear showing a live video 
 
 ![predict_screenshot](../assets/predict_screenshot.gif)
 
+````{admonition} What if the results aren't great? Train the model a little longer!
+Here, we trained the model for only 100 epochs on just 5 annotated images. While this may be enough, the results can often be improved by training the model for ~200 to 500 epochs. To train your model fruther, you can run the `train` command while specifying the weights file from your 100-epoch checkpoint as `model`. For example, to train for an additional 50 epochs, run:
+
+```
+yolo detect train model=path/to/weights/last.pt epochs=50 data=dataset.yaml
+```
+````
+
 ````{admonition} Live inference with Streamlit
 To test the model in a Streamlit app in your web browser, you can download our [inference script](https://github.com/EPFL-Center-for-Imaging/yolo-workshop/blob/main/inference_streamlit.py) from the repository.
 
