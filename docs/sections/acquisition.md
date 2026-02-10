@@ -33,5 +33,5 @@ dataset
 
 - It is true that having more images in your training set generally improves performance. However, when fine-tuning a pretrained model (as we will do), we generally need much fewer images than when training a model from scratch.
 
-- You should ensure that your training set is representative of the variety of lighting, focus, magnification, background, as well as objects and object placements that the model is likely to encounter during operation.
+- You should ensure that your training set is representative of the variety of conditions (lighting, focus, magnification, background) that the model is likely to encounter during operation.
 ```

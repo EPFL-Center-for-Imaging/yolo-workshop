@@ -23,7 +23,7 @@ The original YOLO model was designed in 2015 ([Redmon et al, 2015](https://doi.o
 Since then, more modern versions of the model have been developed (YOLOv2, YOLOv3...), introducing architectural changes and improvements to make the model faster, more accurate, and more versatile ([Models](https://docs.ultralytics.com/models/#featured-models)).
 ```
 
-In this workshop, we will train a YOLO model to automatically recognize different kinds of seeds and spices from our kitchen, using a USB microscope as a camera device.
+In this workshop, we will train a YOLO model to automatically recognize different kinds of seeds from our kitchen, using a USB microscope as a camera device.
 
 ### Microscope Setup
 
@@ -40,7 +40,7 @@ To complete this workshop, you will need:
 Once plugged in, you should also be able to start the microscope camera and capture images.
 
 
-- **Windows**: Open the `Camera` app from the start menu. In the *Settings*, you should be able to select the USB microscope as an input device instead of your webcam.
+- **Windows**: Open the `Camera` app from the start menu. By clicking on the camera icon at the top-right ("Switch camera"), you should be able to select the USB microscope as an input device instead of your webcam.
 - **Mac**: Open the `Photo Booth` app from the Applications folder. In the *Settings*, you should be able to select the USB microscope as an input device instead of your webcam.
 - **Linux**: Install and use [Cheese](https://en.wikipedia.org/wiki/Cheese_(software)) (for example).
 
@@ -82,7 +82,7 @@ dataset
 
 - It is true that having more images in your training set generally improves performance. However, when fine-tuning a pretrained model (as we will do), we generally need much fewer images than when training a model from scratch.
 
-- You should ensure that your training set is representative of the variety of lighting, focus, magnification, background, as well as objects and object placements that the model is likely to encounter during operation.
+- You should ensure that your training set is representative of the variety of conditions (lighting, focus, magnification, background) that the model is likely to encounter during operation.
 ```
 
 ## Annotate your images
@@ -101,6 +101,12 @@ There are many tools available for image annotation ([Label Studio](https://gith
 2. Upload your images (both training and validation) and select the "Object Detection" task.
 3. Provide a list of class labels ("quinoa seed", "chia seed"...) for your objects. Then, select "Start project."
 4. It is then time to draw bounding boxes around your objects! Try you annotate all discernable objects. It's good if you can draw boxes accurately, however **they don't need to be pixel-perfect**. Try to spend a few minutes per image at most.
+
+```{admonition} While you're annotating
+
+This is the perfect time to get to know your group members better. Why did you choose to participate in this workshop? Can you think of any interesting applications of real-time object detection?
+```
+
 5. Once you've annotated all of your images, save your annotations by navigating to `Actions > Export Annotations`. Choose the option to export **A .zip package containing files in YOLO format**.
 6. Download and unzip the package. You should see text files (`image_00.txt`, `image_01.txt`, ...) corresponding to each image's annotations.
 7. Move the text files into a `labels` subfolder alongside your images (respectively under `train` and `val`). Your dataset structure should look similar to this:
@@ -143,7 +149,7 @@ To train a model, we will use the YOLO implementation from the [Ultralytics](htt
 You should already have Python installed on your system. We recommend using a fresh Python virtual environment to follow best practices (for more details, see our [Python setup guide](https://epfl-center-for-imaging.github.io/python-setup/)).
 
 ```{admonition} Verify your installation
-Run `python -V` in your terminal to display your Python version. It should be `3.9` or higher.
+Run `python -V` in your terminal to display your Python version. It should be `3.11` or higher.
 ```
 
 <!-- ![Python Version](../assets/python_version.gif) -->
@@ -203,6 +209,11 @@ Once training begins, grab a coffee and watch the progress in the terminal ☕.
 
 ![training_progress](../assets/training_progress.png)
 
+```{note}
+- Notice that you are not training a model from scratch, but rather **fine-tuning** an existing model (`yolo26n.pt`). This model was pre-trained on a large corpus of natural images (the [COCO](https://cocodataset.org/#home) dataset) and could already detect 80 object classes (chair, person, etc.). Fine-tuning a model is generally a more effective way (more robust, converges faster) to learn to detect new objects than training a completely new model from scratch.
+- The `project` folder you selected to save the training outputs should contain a few overviews of the training batches (*train_batch--.jpg*). Note that the training images are modified in scale, orientation, brightness, and undergo other types of transforms. Introducing these [data augmentations](https://docs.ultralytics.com/guides/yolo-data-augmentation/) during training helps the model generalize to a wider range of conditions than the limited set represented in the training images.
+```
+
 When the training completes, the results will be saved in the directory you've specified as `project`. These results include:
 
 - Visualizations of predictions on the training and validation datasets.
@@ -252,7 +263,8 @@ yolo detect train model=path/to/weights/last.pt epochs=50 data=dataset.yaml
 ```
 ````
 
-````{admonition} Live inference with Streamlit
+## Live inference with Streamlit
+
 To test the model in a Streamlit app in your web browser, you can download our [inference script](https://github.com/EPFL-Center-for-Imaging/yolo-workshop/blob/main/inference_streamlit.py) from the repository.
 
 Then, run it with the following command (specifying the "webcam index" of your USB microscope):
@@ -264,7 +276,6 @@ streamlit run inference_streamlit.py path/to/weights/last.pt -- --webcam 1
 The app should run on [http://localhost:5600](http://localhost:5600). You can open this link in your web browser to see the app.
 
 ![streamlit_creenshot](../assets/streamlit_screenshot.png)
-````
 
 
 ## Conclusion

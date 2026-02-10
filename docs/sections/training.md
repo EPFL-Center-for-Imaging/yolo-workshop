@@ -11,7 +11,7 @@ To train a model, we will use the YOLO implementation from the [Ultralytics](htt
 You should already have Python installed on your system. We recommend using a fresh Python virtual environment to follow best practices (for more details, see our [Python setup guide](https://epfl-center-for-imaging.github.io/python-setup/)).
 
 ```{admonition} Verify your installation
-Run `python -V` in your terminal to display your Python version. It should be `3.9` or higher.
+Run `python -V` in your terminal to display your Python version. It should be `3.11` or higher.
 ```
 
 <!-- ![Python Version](../assets/python_version.gif) -->
@@ -70,6 +70,11 @@ If you wanted, you could customize many more training parameters ([docs](https:/
 Once training begins, grab a coffee and watch the progress in the terminal ☕.
 
 ![training_progress](../assets/training_progress.png)
+
+```{note}
+- Notice that you are not training a model from scratch, but rather **fine-tuning** an existing model (`yolo26n.pt`). This model was pre-trained on a large corpus of natural images (the [COCO](https://cocodataset.org/#home) dataset) and could already detect 80 object classes (chair, person, etc.). Fine-tuning a model is generally a more effective way (more robust, converges faster) to learn to detect new objects than training a completely new model from scratch.
+- The `project` folder you selected to save the training outputs should contain a few overviews of the training batches (*train_batch--.jpg*). Note that the training images are modified in scale, orientation, brightness, and undergo other types of transforms. Introducing these [data augmentations](https://docs.ultralytics.com/guides/yolo-data-augmentation/) during training helps the model generalize to a wider range of conditions than the limited set represented in the training images.
+```
 
 When the training completes, the results will be saved in the directory you've specified as `project`. These results include:
 

@@ -23,7 +23,7 @@ The original YOLO model was designed in 2015 ([Redmon et al, 2015](https://doi.o
 Since then, more modern versions of the model have been developed (YOLOv2, YOLOv3...), introducing architectural changes and improvements to make the model faster, more accurate, and more versatile ([Models](https://docs.ultralytics.com/models/#featured-models)).
 ```
 
-In this workshop, we will train a YOLO model to automatically recognize different kinds of seeds and spices from our kitchen, using a USB microscope as a camera device.
+In this workshop, we will train a YOLO model to automatically recognize different kinds of seeds from our kitchen, using a USB microscope as a camera device.
 
 ## Microscope Setup
 
@@ -41,7 +41,7 @@ Once plugged in, you should also be able to start the microscope camera and capt
 
 `````{tab-set}
 ````{tab-item} Windows
-Open the `Camera` app from the start menu. In the *Settings*, you should be able to select the USB microscope as an input device instead of your webcam.
+Open the `Camera` app from the start menu. By clicking on the camera icon at the top-right ("Switch camera"), you should be able to select the USB microscope as an input device instead of your webcam.
 ````
 ````{tab-item} Mac
 Open the `Photo Booth` app from the Applications folder. In the *Settings*, you should be able to select the USB microscope as an input device instead of your webcam.

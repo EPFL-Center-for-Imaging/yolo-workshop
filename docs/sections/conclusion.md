@@ -17,7 +17,7 @@ You could also have a look at the other [tasks](https://docs.ultralytics.com/tas
 Ultralytics YOLO is distributed under the [AGPL-3.0](https://www.ultralytics.com/legal/agpl-3-0-software-license) license. This license requires that any software or AI models derived from Ultralytics models must also be open-source and distributed under the same license. Be ready to open-source your entire project!
 ```
 
-### Authors
+## Authors
 
 This workshop was prepared by the [EPFL Center for Imaging](https://imaging.epfl.ch/) team. Our role is to support imaging science and scientific image analysis at EPFL and beyond. We carry out imaging-related projects locally and in collaboration with other institutions and industrial partners in Switzerland.
 

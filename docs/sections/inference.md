@@ -26,7 +26,8 @@ yolo detect train model=path/to/weights/last.pt epochs=50 data=dataset.yaml
 ```
 ````
 
-````{admonition} Live inference with Streamlit
+## Live inference with Streamlit
+
 To test the model in a Streamlit app in your web browser, you can download our [inference script](https://github.com/EPFL-Center-for-Imaging/yolo-workshop/blob/main/inference_streamlit.py) from the repository.
 
 Then, run it with the following command (specifying the "webcam index" of your USB microscope):
@@ -38,4 +39,3 @@ streamlit run inference_streamlit.py path/to/weights/last.pt -- --webcam 1
 The app should run on [http://localhost:5600](http://localhost:5600). You can open this link in your web browser to see the app.
 
 ![streamlit_creenshot](../assets/streamlit_screenshot.png)
-````
