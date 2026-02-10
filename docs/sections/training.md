@@ -11,10 +11,10 @@ To train a model, we will use the YOLO implementation from the [Ultralytics](htt
 You should already have Python installed on your system. We recommend using a fresh Python virtual environment to follow best practices (for more details, see our [Python setup guide](https://epfl-center-for-imaging.github.io/python-setup/)).
 
 ```{admonition} Verify your installation
-Run `python -V` in your terminal to display your Python version. It should be `3.8` or higher.
+Run `python -V` in your terminal to display your Python version. It should be `3.9` or higher.
 ```
 
-![Python Version](../assets/python_version.gif)
+<!-- ![Python Version](../assets/python_version.gif) -->
 
 Next, install the `ultralytics` library in your Python environment:
 
@@ -22,9 +22,7 @@ Next, install the `ultralytics` library in your Python environment:
 pip install "ultralytics[solutions]"
 ```
 
-```{note}
 The `[solutions]` option is used to install a few additional dependencies, including [Streamlit](https://streamlit.io/), which we will use for running live inference in a web browser.
-```
 
 ```{admonition} Verify your installation
 Run `yolo checks` in your terminal. This command should display some information about the installed package.

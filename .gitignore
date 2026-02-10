@@ -183,9 +183,11 @@ todo.txt
 _build/
 runs/
 models/
+dataset/**/*.jpg
 dataset/**/*.png
 dataset/**/*.txt
 dataset/**/*.cache
+dataset/**/*.yaml
 figures.svg
 slides/
 papers/

@@ -6,3 +6,4 @@ chapters:
 - file: sections/training
 - file: sections/inference
 - file: sections/conclusion
+# - file: sections/all
