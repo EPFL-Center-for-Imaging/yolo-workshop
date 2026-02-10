@@ -188,3 +188,4 @@ dataset/**/*.txt
 dataset/**/*.cache
 figures.svg
 slides/
+papers/

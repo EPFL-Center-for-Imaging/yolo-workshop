@@ -15,7 +15,7 @@ class CameraYoloInferenceApp:
     def __init__(self, model_path, webcam_idx: int = 0):
         """Initialize the Inference class."""
         self.conf = 0.25  # Confidence threshold for detection
-        self.iou = 0.45  # Intersection-over-Union (IoU)
+        # self.iou = 0.45  # Intersection-over-Union (IoU)
         self.ann_frame = None  # Container for the annotated frame display
         self.selected_ind = []  # Selected class indices for detection
         self.webcam_idx = webcam_idx
@@ -33,7 +33,8 @@ class CameraYoloInferenceApp:
         self.conf = float(
             st.sidebar.slider("Confidence Threshold", 0.0, 1.0, self.conf, 0.01)
         )
-        self.iou = float(st.sidebar.slider("IoU Threshold", 0.0, 1.0, self.iou, 0.01))
+        ## IoU has changed since YOLO26 (NMS-free inference), so it doesn't really  make sense to set it here
+        # self.iou = float(st.sidebar.slider("IoU Threshold", 0.0, 1.0, self.iou, 0.01))
         self.ann_frame = st.container().empty()
 
         class_names = list(self.model.names.values())
@@ -42,8 +43,8 @@ class CameraYoloInferenceApp:
         if not isinstance(self.selected_ind, list):
             self.selected_ind = list(self.selected_ind)
 
-        if st.sidebar.button("Start Camera", use_container_width=True):
-            stop_button = st.button("Stop Camera", use_container_width=True)
+        if st.sidebar.button("Start Camera", width='stretch'):
+            stop_button = st.button("Stop Camera", width='stretch')
 
             cap = cv2.VideoCapture(self.webcam_idx)
             if not cap.isOpened():
@@ -59,7 +60,9 @@ class CameraYoloInferenceApp:
                     break
 
                 results = self.model(
-                    frame, conf=self.conf, iou=self.iou, classes=self.selected_ind
+                    frame, conf=self.conf, 
+                    # iou=self.iou, 
+                    classes=self.selected_ind, verbose=False,
                 )
 
                 annotated_frame = results[0].plot()  # Add annotations on frame
@@ -68,11 +71,7 @@ class CameraYoloInferenceApp:
                     cap.release()
                     st.stop()
 
-                self.ann_frame.image(
-                    annotated_frame,
-                    channels="BGR",
-                    use_container_width=True,
-                )
+                self.ann_frame.image(annotated_frame, channels="BGR", width='stretch')
 
             cap.release()
 
