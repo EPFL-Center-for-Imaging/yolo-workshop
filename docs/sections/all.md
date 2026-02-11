@@ -1,5 +1,7 @@
 # Object Detection with YOLO
 
+Online version of this guide: https://go.epfl.ch/yolo-workshop
+
 In this workshop, we'll go through the steps of acquiring images, annotating them, training an object detection model, and testing it in real time on USB microscopes.
 
 ```{mermaid}
@@ -49,10 +51,6 @@ Now that you're set up, let's dive in - starting with acquiring some training im
 
 ## Create a training set of images
 
-```{margin}
-Estimated time for this step: 10-15 minutes.
-```
-
 You should start by collecting a set of representative images of the objects you'd like to detect. For a first try, we recommend that you take **five** images for training and **two** for validation. You should vary the "scene" by placing different objects in the field of view for each image. You can keep the magnification fixed between the images.
 
 ![training_set](../assets/training_set.png)
@@ -86,10 +84,6 @@ dataset
 ```
 
 ## Annotate your images
-
-```{margin}
-Estimated time for this step: 20-25 minutes.
-```
 
 In this step, you'll annotate the images you've collected for training and validation. Annotation consists in manually creating a "ground truth" for the model to learn from. For object detection, this means drawing rectangular bounding boxes around the objects. Moreover, you can assign class labels to these bounding boxes to categorize them.
 
@@ -137,10 +131,6 @@ With your annotated dataset ready, you're all set to train your first model.
 
 
 ## Train your model
-
-```{margin}
-Estimated time for this step: 20-25 minutes.
-```
 
 To train a model, we will use the YOLO implementation from the [Ultralytics](https://ultralytics.com/) Python library, which provides a variety of tools to train, validate, and work with YOLO models.
 
