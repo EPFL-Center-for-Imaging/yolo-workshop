@@ -30,6 +30,14 @@ Run `yolo checks` in your terminal. This command should display some information
 
 For advanced or custom installation of Ultralytics, refer to their [Quickstart Guide](https://docs.ultralytics.com/quickstart/).
 
+````{dropdown} (Optional) Test a pre-trained model on your webcam
+At this point, if your laptop has a webcam, you should be able to run a pre-trained model, for example `yolo26n.pt`, which is capable of detecting 80 common classes (chair, person...) on your webcam's video stream. To try this out, run the following command:
+```
+yolo predict model=yolo26n.pt source=0 show=True
+```
+*Note*: `source=0` represents your webcam as a source for prediction.
+````
+
 ## Create a `dataset.yaml`
 
 To train a model, you also need to create a YAML configuration file named `dataset.yaml`. This file should specify the paths to your training and validation images, as well as the class labels for your model.
