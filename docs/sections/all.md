@@ -72,8 +72,8 @@ dataset
              |---- ...
              |---- image_05.png
         |---- val
-             |---- image_01.png
-             |---- image_02.png
+             |---- image_06.png
+             |---- image_07.png
 ```
 
 ```{admonition} Tips for acquiring a good training set
@@ -114,8 +114,8 @@ dataset
           |---- ...
           |---- image_05.png
      |---- val
-          |---- image_01.png
-          |---- image_02.png
+          |---- image_06.png
+          |---- image_07.png
 |---- labels
      |---- train
           |---- image_01.txt
@@ -123,8 +123,8 @@ dataset
           |---- ...
           |---- image_05.txt
      |---- val
-          |---- image_01.txt
-          |---- image_02.txt
+          |---- image_06.txt
+          |---- image_07.txt
 ```
 
 With your annotated dataset ready, you're all set to train your first model.
