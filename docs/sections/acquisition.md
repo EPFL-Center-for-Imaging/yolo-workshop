@@ -26,7 +26,7 @@ dataset
              |---- image_05.png
         |---- val
              |---- image_06.png
-             |---- image_06.png
+             |---- image_07.png
 ```
 
 ```{admonition} Tips for acquiring a good training set
