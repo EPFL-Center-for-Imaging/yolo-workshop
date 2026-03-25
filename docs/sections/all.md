@@ -183,7 +183,7 @@ You can create your own `dataset.yaml` file and save it somewhere on your comput
 Once you haver your configuration file, you can start the training process by running the following command in your terminal:
 
 ```
-yolo detect train data=path/to/dataset.yaml model=yolo26n.pt epochs=100 project=/path/to/output
+yolo detect train data=path/to/dataset.yaml model=yolo26n.pt epochs=200 project=/path/to/output
 ```
 
 This command specifies:
@@ -246,7 +246,7 @@ When you run the `predict` command, a window should appear showing a live video 
 ![predict_screenshot](../assets/predict_screenshot.gif)
 
 ````{admonition} What if the results aren't great? Train the model a little longer!
-Here, we trained the model for only 100 epochs on just 5 annotated images. While this may be enough, the results can often be improved by training the model for ~200 to 500 epochs. To train your model fruther, you can run the `train` command while specifying the weights file from your 100-epoch checkpoint as `model`. For example, to train for an additional 50 epochs, run:
+Here, we trained the model for only 200 epochs on just 5 annotated images. While this may be enough, the results can often be improved by training the model for ~300 to 500 epochs. To train your model fruther, you can run the `train` command while specifying the weights file from your 200-epoch checkpoint as `model`. For example, to train for an additional 50 epochs, run:
 
 ```
 yolo detect train model=path/to/weights/last.pt epochs=50 data=dataset.yaml
